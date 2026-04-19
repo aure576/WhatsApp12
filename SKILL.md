@@ -1,21 +1,17 @@
-# WhatsApp Listening and Response
+---
+name: whatsapp-listen
+description: A WhatsApp listening skill that triggers on specific intents.
+---
 
-## Description
-This skill allows the application to listen for incoming WhatsApp messages and respond accordingly.
+## Instructions
+To set up the send-email pattern for your WhatsApp listening skill, you need to provide the following parameters to the `run_intent` tool:
 
-## Prerequisites
-- WhatsApp Business Account
-- WhatsApp API setup
+- **webhook_payload**: The data received from the webhook when a WhatsApp message is sent.
+- **openai_api_key**: Your OpenAI API Key for accessing the model.
+- **whatsapp_api_token**: The token for authenticating with the WhatsApp API.
+- **whatsapp_phone_number_id**: The ID of the phone number you are using with WhatsApp.
+- **gpt_model**: The model to use for generating responses (e.g., "gpt-3.5-turbo").
+- **system_prompt**: A string that defines the system's behavior or persona.
+- **max_history**: The maximum number of past messages to consider for context.
 
-## Workflow
-1. **Listen for Incoming Messages**: Set up a webhook to listen for incoming messages on the WhatsApp number.
-2. **Process the Message**: Parse the incoming message to understand the user's intent.
-3. **Respond to the User**: Based on the parsed intent, formulate and send a response back to the user.
-
-## Example Usage
-- User sends: "Hello"
-- Bot responds: "Hi there! How can I assist you today?"
-
-## Notes
-- Ensure proper handling of different message types (text, images, etc.).
-- It's recommended to comply with WhatsApp's guidelines for messaging.
+Make sure that all parameters are correctly configured to ensure the skill functions properly.
